@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kakaire">
+    <meta name="date" content="28-01-2022">
+    <title>Lorem ipsum dolor sit amet</title>
+    <style>
+        body {
+              font-family: cabri, serif;
+              background-color: lavender;
+              color: navy;
+        }
+
+        h1 {
+            font-family: cabri; fantasy;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .table {
+                display: table;
+                display: flex;
+                align-items: flex-start;
+        }
+
+        .cell {display: table-cell;}
+        nav > * {
+                 display: block;
+                 margin: 18px 25px 18px 0;
+        }
+
+        a > img {
+        width: 120px;
+        height: 80px;
+        }
+
+        iframe {
+                border: none;
+                overflow: hidden;
+        }
+</style>
+</head>
+
+<body>
+<h1>Lorem ipsum dolor sit amet</h1>
+<h3>Lorem ipsum dolor sit amet</h3>
+
+<div class="table">
+    <!--
+    Using Images as links to other images
+    -->
+    <nav class="cell">
+        <a href="../Images/Crested cranes.jpg" target="full-size">
+            <img src="../Images/Crested cranes_small.jpg" alt="Crested cranes">
+        </a>
+        <a href="../Images/Safari Tree.jpg" target="full-size">
+            <img src="../Images/Safari Tree_small.jpg" alt="Safari Tree">
+        </a>
+        <a href="../Images/Sunrise_safari.jpg" target="full-size">
+            <img src="../Images/Sunrise_safari_small.jpg" alt="Sunrise_safari">
+        </a>
+    </nav>
+
+    <iframe class="cell"
+            name="full-size"
+            width="640"
+            height="430"
+            src="../Images/Crested cranes.jpg">
+    </iframe>
+</div>
+</body>
+
+</html>

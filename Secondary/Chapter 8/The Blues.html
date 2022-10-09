@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kakaire">
+    <meta name="date" content="02-02-2022-Wednesday">
+
+    <style>
+        html {
+            height: 100vh;
+            /*
+            vh is a relative unit meaning viewport height,
+            which specifies the percentage of the browser's widow viewport
+            */
+
+            display: flex;
+            /*
+            A flexible box enables responsive display of flex items, varying
+            according to the items it contains.
+            */
+
+            justify-content: center;
+            /*justify-content centers the specified items horizontally*/
+
+            align-items: center;
+            /*
+            This centers items vertically*/
+        }
+
+        body {
+            background-image: linear-gradient (to right, blue, #00ffff, #ff7700);
+            background-attachment: fixed;
+            text-align: center;
+        }
+
+        .table {
+            display: table;
+            border-spacing: 20px;
+        }
+
+        .caption {
+            display: table-caption;
+            font-size: xx-large;
+        }
+
+        .cell {display: table-cell;}
+
+    </style>
+</head>
+
+<body>
+<div class="table">
+    <div class="caption">Elevator to Heaven</div>
+    <div class="cell">
+        <h3>The Blues Music</h3>
+        <video src="../Videos/Chris Bell - Elevator To Heaven.webm"
+               controls="controls"
+               preload="metadata"
+               width="70%" height="70%"></video>
+    </div>
+
+    <div class="cell">
+        <h3>The Blues Music</h3>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/y0GcE7m8WQU"
+                title="YouTube video player"
+                frameborder="0" allow="accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture"
+                allowfullscreen>
+
+        </iframe>
+    </div>
+</div>
+</body>
+</html>
