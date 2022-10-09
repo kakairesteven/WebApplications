@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Kakaire Steven">
+        <meta name="date" content="23-02-2022-Wednesday">
+
+        <title>Game Night</title>
+        <style>
+            body {background-color: rgb(205, 255, 255);}
+        </style>
+        <script>
+            // Direct the user to the ACM Club Page
+
+            function partyOn() {
+                if (confirm("can you handle the excitement?")) {
+                    window.location.assign(
+                        "https://www.mak.ac.ug"
+                    );
+                }
+            } // end partyon
+        </script>
+    </head>
+
+    <body>
+        <h1>Makerere University</h1>
+        <p>
+            The premium black university building for the future.
+        </p>
+
+        <p>
+            Confirm your reservation by clicking below.
+        </p>
+
+        <input type="button" value="Party Reservations" onclick="partyOn();">
+    </body>
+</html>

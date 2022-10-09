@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Kakaire">
+        <meta name="date" content="03/03/2022-Thursday">
+        <title>Water Balloons</title>
+        <style>
+            html {display: flex; justify-content: center;}
+            body {
+                background-color: black;
+                background-image: url(../Images/WaterBalloon.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .table {display: table;}
+            .row {display: table-row;}
+            .row >* {display: table-cell;}
+
+            .table {border-spacing: 10px;}
+            .row > :first-child {text-align: right;}
+            .row > * {font-size: 1em;}
+
+            .top {font-size: 4em; text-align: center;}
+            .bottom {text-align: center;}
+            .bottom > * {font-size: 2em;}
+            *:not(input) {color: white;}
+
+            input:invalid:focus {background-color: rgb(250, 9, 9);}
+            input:valid:focus {background-color: lightgreen;}
+        </style>
+
+        <script>
+            // This function calculates and displays the total water
+            // needed to fill up water balloons.
+
+            function calculateWater(form) {
+                const CUBIC_INCHES_PER_GALLON = 231;
+                var qty;        // number of balloons
+                var diameter; // balloon diammeter of water needed
+
+                qty = parseInt(form.elements["qty"].value);
+                diameter = parseFloat(form.elements["diameter"].value);
+                gallons = qty * 
+                    (4 / 3 * Math.PI * Math.pow(diameter / 2, 3) /
+                    CUBIC_INCHES_PER_GALLON);
+                document.getElementById("total-water").innerHTML =
+                    "Gallons of water needed to fill up the balloons = " + 
+                    gallons.toFixed(-1);
+                    //toFixed(n) rounds-off the calculated Value to
+                    // nearest (10^-(nth-value))
+            } // end calculateWater
+        </script>
+    </head>
+    <body>
+        <h1 class="top">Water Balloon Fun!</h1>
+        <form class="table" id="myForm">
+            <div class="row">
+                <label for="qty">Number of spherical water balloons:</label>
+                <input type="number" id="qty"
+                    min="0" max="99" step="1" required>
+            </div>
+
+            <div class="row">
+                <label for="diameter">Diameter of each balloon in inches:</label>
+                <input type="number" id="diameter"
+                    min="0" max="12" step=".01" required>
+            </div>
+        </form>
+
+        <br>
+        <div class="bottom">
+            <input type="button" form="myForm" value="Calculate water"
+                onclick="calculateWater(this.form);">
+            <br><br>
+
+            <output id="total-water" form="myForm"></output>
+        </div>
+    </body>
+</html>

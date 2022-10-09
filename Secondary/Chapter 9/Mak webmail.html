@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Kakaire">
+        <meta name="date" content="18-02-2022-Friday">
+        <title>Mak Webmail</title>
+
+        <script>
+            function generateEmail(form) {
+                document.getElementById("email").innerHTML = 
+                form.elements["first"].value + "." +
+                form.elements["last"].value + "@mak.ac.ug"
+            form.reset();
+            form.elements["first"].focus();
+            }
+        </script>
+    </head>
+
+    <body>
+        <h3>Enter your first and last names, click Generate Email.</h3>
+        <form>
+            First Name: 
+            <input type="text" id="first" size="15" autofocus>
+            <br><br>
+
+            Last Name:
+            <input type="text" id="last" size="15">
+            <br><br>
+            <input type="button" value="Generate Email"
+                onclick="generateEmail(this.form);">
+
+            <p id="email"></p>
+        </form>
+    </body>
+</html>
