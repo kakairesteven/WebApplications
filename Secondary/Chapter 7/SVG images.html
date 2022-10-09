@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kakaire">
+    <title>Daring</title>
+    <style>
+        h1, h3 {text-align: center;}
+        td {border: thin solid;}
+
+        .center {display: flex;
+        justify-content: center;
+        }
+
+        .gap {width: 50px;
+              border: none;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Eiffel Tower</h1>
+<h3>
+    Displaying each image with the PNG file's natural
+    dimensions (width="50%" height="50%)
+</h3>
+
+<div class="center">
+    <table>
+        <tr><th>PNG Format</th><th></th><th>SVG Format</th></tr>
+        <tr>
+            <td>
+                <img src="Eiffel.jpg" alt="Eiffel Tower jpg" width="50%" height="50%">
+            </td>
+
+            <td class="gap"></td><!--can't adjust table cell margins-->
+            <td><img src="Eiffel_svg.svg" alt="Eiffel Tower SVG" width="50%" height="50%"></td>
+        </tr>
+    </table>
+</div>
+<br>
+<h3>
+    Displaying the same images above, but with expanded dimensions
+    (width="80%" height="80%")
+</h3>
+<div class="center">
+    <table>
+        <tr><th>PNG Format</th><th></th><th>SVG Format</th></tr>
+        <tr>
+            <td>
+                <img src="Eiffel.jpg" alt="Eiffel Tower jpg" width="80%" height="80%">
+            </td>
+
+            <td class="gap"></td><!--can't adjust table cell margins-->
+            <td><img src="Eiffel_svg.svg" alt="Eiffel svg" width="80%" height="80%"></td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
