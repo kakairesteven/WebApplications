@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="Author" content="Kakaire Steven">
+        <meta name="date" content="17/03/2022-Thursday">
+        <title>Compound Interest Calculator</title>
+        <style>
+            .table {display: table;}
+            .row {display: table-row;}
+            .row > * {display: table-cell;}
+
+            .table {border-spacing: 0 3px}
+            .row >:first-child {
+                text-align: right;
+                padding: 5px;
+            }
+            
+            .table, th, td {border: none;}
+            th, td {padding: 10px;}
+            th {
+                background-color: rgb(90, 90, 241);
+            }
+            td {background-color: rgb(243, 189, 183);}
+        </style>
+
+        <script src="CompoundInterest2.js">
+        </script>
+    </head>
+
+    <body>
+        <h3>Compound Interest Calculator</h3>
+        <form class="table" id="input">
+            <div class="row">
+                <label for="amount">Initial Deposit: </label>
+                <input type="number" id="amount" min="100"
+                    max="9999" step="100" required>
+                <span>&nbsp; &nbsp;</span>
+            </div>
+
+            <div class="row">
+                <label for="rate">Annual Interest Rate: </label>
+                <input type="number" id="rate" min="1" max="100"
+                    step=".1" required>
+                    <span>&nbsp; %</span>
+            </div>
+
+            <div class="row">
+                <label for="duration">Time (months): </label>
+                <input type="number" id="duration"
+                    min="1" step="1" max="36" required>
+            </div>
+        </form>
+
+        <br>
+        <input type="button" form="input" value="Calculate Compound Interest"
+            onclick="generateCompoundInterest(this.form);">
+
+        <div id="result"></div>
+    </body>
+</html>
